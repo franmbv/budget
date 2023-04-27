@@ -1,2 +1,2 @@
-# budget.github.io
+# budget
 Budge app
