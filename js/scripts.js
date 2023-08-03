@@ -62,11 +62,11 @@ const loadIncome = () => {
 const createIncome = (income) => {
   const incomeHTML = `
   <div class="element cleanStyle">
-    <p class="element-description">${income.description}</p>
+    <p class="element__description">${income.description}</p>
     <div class="right cleanStyle">
-      <p class="element-value">+ ${currencyFormat(income.value)}</p>
-        <div class="element-delete">
-          <button class="element-delete--btn">
+      <p class="element__value">+ ${currencyFormat(income.value)}</p>
+        <div class="element__delete">
+          <button class="element__delete--btn">
           <ion-icon name="close-circle-outline" onclick="deleteIncome(${
             income.id
           })"></ion-icon>
@@ -96,14 +96,14 @@ const loadExpense = () => {
 const createExpense = (expense) => {
   let expenseHTML = `
   <div class="element cleanStyle">
-    <p class="element-description">${expense.description}</p>
+    <p class="element__description">${expense.description}</p>
     <div class="right cleanStyle">
-      <p class="element-value">-${currencyFormat(expense.value)}</p>
-      <p class="element-percentage">${percentFormat(
+      <p class="element__value">-${currencyFormat(expense.value)}</p>
+      <p class="element__percentage">${percentFormat(
         expense.value / totalExpenses()
       )}</p>
-      <div class="element-delete">
-        <button class="element-delete--btn">
+      <div class="element__delete">
+        <button class="element__delete--btn">
           <ion-icon name="close-circle-outline"
           onclick="deleteExpense(${expense.id})"></ion-icon>
         </button>
