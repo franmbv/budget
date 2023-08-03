@@ -5,27 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title class="rojo">Budget it</title>
-    <link rel="icon" href="image/logo.ico">
+    <link rel="icon" href="/image/logo.ico" />
     <link rel="stylesheet" href="styles.css" />
   </head>
- 
+
   <body onload="loadApp()">
     <div class="header">
       <div class="budget">
-        <h1 class="budget-title">Available Budget</h1>
-        <div class="budget-value" id="estimate"></div>
-        <div class="budget-income cleanStyle">
-          <p class="budget-income--text">Incomes</p>
+        <h1 class="budget__title">Available Budget</h1>
+        <div class="budget__value" id="estimate"></div>
+        <div class="budget__income cleanStyle">
+          <p class="budget__income--text">Incomes</p>
           <div class="right">
-            <div class="budge-income--value" id="income"></div>
-            <div class="budge-income--percentage">&nbsp;</div>
+            <div class="budge__income--value" id="income"></div>
+            <div class="budge__income--percentage">&nbsp;</div>
           </div>
         </div>
-        <div class="budge-expenses cleanStyle">
-          <p class="budge-expenses--text">Expenses</p>
+        <div class="budge__expenses cleanStyle">
+          <p class="budge__expenses--text">Expenses</p>
           <div class="right cleanStyle">
-            <div class="budge-expenses--value" id="expenses"></div>
-            <div class="budge-expenses--percentage" id="percent"></div>
+            <div class="budge__expenses--value" id="expenses"></div>
+            <div class="budge__expenses--percentage" id="percent"></div>
           </div>
         </div>
       </div>
@@ -33,34 +33,42 @@
 
     <form id="forma" onsubmit="return false">
       <div class="add">
-        <div class="add-container">
-          
-          <select class="add-type" id="type">
+        <div class="add__container">
+          <select class="add__type" id="type">
             <option value="income" selected>+</option>
             <option value="expense">-</option>
           </select>
-          
-          <input type="text" class="add-description" placeholder="Add description" id="description">
-          
-          <input type="number" class="add-value" placeholder="Value" id="value" step="any">
-          
-          <button class="add-btn" onclick="addData()">
+
+          <input
+            type="text"
+            class="add__description"
+            placeholder="Add description"
+            id="description"
+          />
+
+          <input
+            type="number"
+            class="add__value"
+            placeholder="Value"
+            id="value"
+            step="any"
+          />
+
+          <button class="add__btn" onclick="addData()">
             <ion-icon name="checkmark-circle-outline"></ion-icon>
           </button>
-        
         </div>
       </div>
     </form>
 
-
     <div class="container cleanStyle">
       <div class="income">
-        <h2 class="income-title">Incomes</h2>
+        <h2 class="income__title">Incomes</h2>
         <div id="income-list"></div>
       </div>
 
       <div class="expenses">
-        <h2 class="expenses-title">Expenses</h2>
+        <h2 class="expenses__title">Expenses</h2>
         <div id="expense-list"></div>
       </div>
     </div>
